@@ -10,9 +10,10 @@
 * A web service response should always have the content type of ```application/json```
 * A web service should never return HTML
 * A web service response body should always be valid JSON, even if it is just an empty dictionary
-* A web service should never return a redirect (any HTTP status code within the ```300``` range)
+* A web service should never return a redirect (any HTTP status code within the ```3XX``` range)
 * Unless a web service is only consumed by an internal server infrastructure, web services should support versioning and have a required version parameter
-* Never pass sensitive data such as user credentials in a URL.  Pass sensitive data through the HTTP body.
+* Sensitive data such as user credentials should not be passed in a URL
+    * Instead, sensitive data should be passed using an HTTP body
 * Do not pass credentials on every request.  Use sessions/tokens
 * The interface of an HTTP `get` request should be treated as immutable.  In other words, the functionality of an HTTP `get` request should never modify public server state.
   
@@ -24,10 +25,12 @@
     * Good: `app/run`
 * A web app should not use CORS to communicate with its own servers
 * All web services should support CORS
+* Static content should not be served through Node.js, unless it is reverse-proxying a service that requires specialized business logic such as advanced authorization
+    * Instead, use a service like S3+Cloudfront
 
 ## Database
 
-* When querying data from a SQL database, perform all filtering in SQL, not server code.  Performing the filtering in SQL is:
+* When querying data from a SQL database, most filtering should be perfomed in SQL, not server code.  Performing the filtering in SQL is:
 
     * More performant
     
@@ -37,4 +40,5 @@
 
 ## Testing
 
-* Whenever practical, hard-code fixture ids. It makes testing easier and more predictable.
+* Whenever practical, hard-code fixture ids
+  * Doing so makes testing easier and more predictable

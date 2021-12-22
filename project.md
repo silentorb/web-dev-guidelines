@@ -29,8 +29,6 @@
 
 ### Node.js
 
-* Do not serve static content from Node.js.  Use a service like S3+Cloudfront.
-
 * Always lock dependencies to a major version using either exact versions or the caret symbol
 
   * Very good: "2.0.1"
