@@ -4,16 +4,11 @@
 
 * Commit messages should be meaningful and distinct
 * Break large tasks into multiple PRs
-* When working on multiple feature branches in parallel, ensure that none of the branches depend on each for at least partial functionality
-  * This sometimes requires additional abstractions to loosely couple the individual features.
-  * It is easier to work on features sequentially than in parallel
-  * Parallel development requires additional overhead
-* When practical, group style changes and functionality changes into separate commits.
-  * This way, functionality change commits are not cluttered by style changes, and style change commits can be more casually reviewed, knowing that there are no functional changes.
-* When practical, group moving files and editing files into separate commits
-  * Due to the way modern JavaScript imports usually contain relative paths, this point is less useful than it is for some other languages because moving JavaScript files usually results in changes to its import paths, making it rare that moving a JavaScript file does not also result in an edit.
 * In general, branch names should be prefixed with either `feature/` or `bug/`
 * PR branches should be free of TypeScript errors
+* Repos for production backend or frontend code should be created with `prod`, `staging`, and `dev` branches and no `master` or `main` branch
+  * Repos for libraries that are not directly deployed can use a `master` branch
+* When a merged PR is squashed, developers need to be sure to promptly merge squashed merges back into their development branches or there will be history conflicts
 
 ## When Accepting a PR
 
