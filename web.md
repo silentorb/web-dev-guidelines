@@ -25,5 +25,5 @@
 * Form field components should output refined data so that the form submission function needs to do as little cleanup of the form data as possible
   * Example: A field that only accepts numbers should store its field data as a number, not a string
 * When expanding a component to be used in different cases, if possible split the component into smaller reusable components instead of adding configuration props to the component
-  * Composition is flexible and infinitely scales, while increased configuration props creates traffic jams
+  * Composition is flexible and infinitely scales, while increasing configuration creates traffic jams
 

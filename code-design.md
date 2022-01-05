@@ -4,7 +4,8 @@
 
 * Use immutable data whenever practical
   * Use pure functions
-  * Some recursive algorithms are simpler to implement using mutating loops.  Such cases are fine as long as the only variables being mutated are variables that do not exist outside of the function's scope.
+  * Some recursive algorithms are simpler to implement using mutating loops
+    * Such cases are fine as long as the only variables being mutated are variables that do not exist outside of the function's scope
 * Minimize function call depth
   * A deep call stack can often be cleanly refactored into a flatter sequence of chained functions
 
