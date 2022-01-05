@@ -36,7 +36,9 @@
     
     * More useful for database admins
         * A database admin can run snippets of SQL on a database, but cannot do so with JavaScript
-    
+* TypeORM is the standard TypeScript ORM, but it is over-engineered and can sometimes get in the way as much or more than it helps
+    * Especially for large queries, it is sometimes better to use raw SQL strings instead of TypeORM query builders
+    * When reuse and composition is needed for raw SQL strings, those strings can be broken up into exported const variables or functions that return a string
 
 ## Testing
 

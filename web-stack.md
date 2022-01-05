@@ -25,12 +25,14 @@
 ## Back End
 
 * NestJS
+  * NestJS is over-engineered and conflicts with standard Node.js best practices, so use it cautiously
 * PostgreSQL
 * Basic REST
   * Don't worry about being 100% RESTful
   * 100% RESTful isn't practical
   * Most web APIs use a common subset of REST
 * TypeORM
+  * Similar to NestJS but to a lesser degree, TypeORM is over-engineered so use it cautiously
 * Jest
 
 ## Dev Ops
