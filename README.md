@@ -2,15 +2,11 @@
 
 ## Overview
 
-These are a collection of guidelines for developing web apps using the following stack:
-
-* Node.js
-* React
-* TypeScript
-* PostgreSQL
+These are a collection of guidelines for developing web apps
 
 ## Contents
 
+* [Web Stack](./web-stack.md)
 * [Code Style](./code-style.md)
 * [Code Design](./code-design.md)
 * [Project Structure](./project.md)

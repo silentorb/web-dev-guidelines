@@ -7,7 +7,7 @@
 
 ## Styling
 
-* Use styled components
+* Use styled components and/or MUI
 * Avoid global styles other than the most universal of attributes such as font family
 * Avoid global styles except for styling third-party components, which sometimes require cascading styling
 * Minimize occurrences of the same line or block of CSS code.
